@@ -1,0 +1,29 @@
+<div class="w-full h-full bg-white rounded-lg flex flex-col items-center justify-center">
+    <form class="w-4/5 lg:w-1/2 flex flex-col p-4">
+      <h1 class="text-3xl font-bold mb-4">Add a new user</h1>
+      <div class="w-full flex flex-col mb-4">
+        <label for="organisation" class="text-lg mb-2">Organisation</label>
+        <input type="text" id="organisation" name="organisation" class="border rounded-lg p-2 w-full mb-4" required>
+      </div>
+      <div class="w-full flex flex-col mb-4">
+        <label for="peers" class="text-lg mb-2">Peers</label>
+        <input type="text" id="peers" name="peers" class="border rounded-lg p-2 w-full mb-4" required>
+      </div>
+      <div class="w-full flex flex-col mb-4">
+        <label for="port" class="text-lg mb-2">Port</label>
+        <input type="port" id="port" name="port" class="border rounded-lg p-2 w-full mb-4" required>
+      </div>
+      <div class="w-full flex flex-col mb-4">
+        <label for="other" class="text-lg mb-2">other</label>
+        <select name="other" id="other" class="border rounded-lg p-2 w-full mb-4" required>
+          <option value="admin">Admin</option>
+          <option value="member">Member</option>
+        </select>
+      </div>
+      <div class="w-full flex justify-between items-center mb-4">
+        <button type="button" (click)="onCancelClick()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">Cancel</button>
+        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">Create</button>
+      </div>
+    </form>
+  </div>
+  

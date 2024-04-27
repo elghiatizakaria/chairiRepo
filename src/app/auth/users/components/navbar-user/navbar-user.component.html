@@ -1,0 +1,26 @@
+<div class="text-sm font-medium text-center">
+    <ul class="flex flex-wrap -mb-px">
+        <li *ngFor="let item of menuItems"
+            [class.me-2]="true"
+            [class.active]="item.isActive"
+            [class.border-b-2]="item.isActive"
+            [class.border-transparent]="!item.isActive"
+            [class.rounded-t-lg]="true"
+            [class.hover:text-gray-600]="!item.isActive"
+            [class.hover:border-gray-300]="!item.isActive"
+            [class.dark:hover:text-gray-300]="!item.isActive"
+            [class.text-blue-600]="item.isActive"
+            [class.border-blue-600]="item.isActive"
+            [class.dark:text-blue-500]="item.isActive"
+            [class.dark:border-blue-500]="item.isActive">
+            <a  class="inline-block p-4" (click)="setActiveItem(item)" [attr.aria-current]="item.isActive ? 'page' : null">
+                {{ item.label }}
+            </a>
+        </li>
+    </ul>
+    <app-details-user *ngIf="activeItem.label === 'Details'"></app-details-user>
+    <!-- Add similar *ngIf conditions for other components -->
+    <app-credentials-user *ngIf="activeItem.label === 'Credentials'"></app-credentials-user>
+    <app-roles-user *ngIf="activeItem.label === 'Roles'"></app-roles-user>
+    <app-settings-user *ngIf="activeItem.label === 'Settings'"></app-settings-user>
+</div>

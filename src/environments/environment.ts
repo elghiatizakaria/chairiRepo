@@ -1,0 +1,3 @@
+export const environment = {
+  
+    TOKEN : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZXhwbG9yZXJhZG1pbiIsIm5ldHdvcmsiOiJmaXJzdC1uZXR3b3JrIiwiaWF0IjoxNzEzMzczMDc0LCJleHAiOjE3MTMzODAyNzR9.c5dMRZqFRXBcD_IEZga4xTbIxTxGk0hDZFtYSqpiuns' };

@@ -1,0 +1,69 @@
+<div class="bg-white h-full flex flex-col max-w-2xl">
+    <div class="flex items-center justify-between px-4 py-3 border-b border-gray-300">
+      <h2 class="text-lg font-semibold">block Details</h2>
+      <button class="text-gray-500 focus:outline-none">
+        <svg class="h-4 w-4 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" (click)="close()">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="p-6">
+      <dl class="space-y-6">
+        <div class="table-wrapper" style="width: 760px;">
+          <table class="table">
+            <tbody>
+              <tr>
+                  <th class="text-left">Block Number</th>
+                  <td class="text-left">{{block.blocknum}}</td>
+                </tr>
+              <tr>
+                <th class="text-left">Channel Name</th>
+                <td class="text-left">{{block.channelname}}</td>
+              </tr>
+              <tr>
+                <th class="text-left">Transaction/th>
+                <td class="text-left">{{block.txcount}}</td>
+              </tr>
+              <tr>
+                <th class="text-left">Data Hash</th>
+                <td class="text-left">{{block.datahash}}</td>
+              </tr>
+              <tr>
+                <th class="text-left">Block Hash</th>
+                <td class="text-left">{{block.blockhash}}</td>
+              </tr>
+              <tr>
+                <th class="text-left">Previous Hash</th>
+                <td class="text-left">{{block.prehash}}</td>
+              </tr>
+              <tr>
+                <th class="text-left">Transaction hash</th>
+                <td class="text-left">{{block.txhash}}</td>
+              </tr>
+              <tr>
+                <th class="text-left">Size(KB)</th>
+                <td class="text-left">{{block.blksize}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <style>
+          .table-wrapper {
+            overflow-x: auto;
+          }
+          .table {
+            width: 100%;
+            border-spacing: 0 0.5rem;
+          }
+          .table th,
+          .table td {
+            padding: 0.5rem;
+            text-align: left;
+          }
+        </style>
+      </dl>
+  
+    </div>
+  </div>
+  
+  

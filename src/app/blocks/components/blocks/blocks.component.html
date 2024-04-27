@@ -1,0 +1,60 @@
+<div class="bg-gray-100 min-h-screen">
+  <div class="container mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Blocks</h1>
+    <div class="flex items-center justify-between mb-4">
+      <div>
+        <label for="from" class="text-sm font-medium block mb-1">From</label>
+        <input type="datetime-local" id="from" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"  [(ngModel)]="from"/>
+      </div>
+      <div>
+        <label for="to" class="text-sm font-medium block mb-1">To</label>
+        <input type="datetime-local" id="to" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"  [(ngModel)]="to" />
+      </div>
+    
+       
+      <button class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 text-white font-semibold rounded-md" (click)="reset()">Reset</button>
+      <button class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 text-white font-semibold rounded-md" (click)="print()">Search</button>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="table-fixed w-full text-left whitespace-no-wrap">
+        <colgroup>
+          <col style="width: 100px"/>
+          <col style="width: 150px"/>
+          <col style="width: 100px"/>
+          <col style="width: 250px"/>
+          <col style="width: 250px"/>
+          <col style="width: 250px"/>
+          <col style="width: 250px"/>
+          <col style="width: 100px"/>
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="px-4 py-2 bg-gray-200">Block Number</th>
+            <th class="px-4 py-2 bg-gray-200">Channel Name</th>
+            <th class="px-4 py-2 bg-gray-200">Number of Tx</th>
+            <th class="px-4 py-2 bg-gray-200">Data Hash</th>
+            <th class="px-4 py-2 bg-gray-200">Block Hash</th>
+            <th class="px-4 py-2 bg-gray-200">Previous Hash</th>
+            <th class="px-4 py-2 bg-gray-200">Transactions</th>
+            <th class="px-4 py-2 bg-gray-200">Size(KB)</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let block of blocks">
+                <td class="border px-4 py-2">{{ block.blocknum }}</td>
+                <td class="border px-4 py-2">{{ block.channelname | slice:0:15 }}</td>
+                <td class="border px-4 py-2">{{ block.txcount }}</td>
+                <td class="border px-4 py-2">{{ block.datahash | slice:0:15 }}</td>
+                <td class="border px-4 py-2">{{ block.blockhash | slice:0:15 }}</td>
+                <td class="border px-4 py-2">{{ block.prehash | slice:0:15 }}</td>
+                <td class="border px-4 py-2">{{ block.txhash | slice:0:15 }}</td>
+                <td class="border px-4 py-2">{{ block.blksize }}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+

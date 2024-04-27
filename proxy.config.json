@@ -1,0 +1,45 @@
+{
+  "/api/status/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  },
+  "/api/channels/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+  ,
+  "/api/chaincode/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+  ,
+  "/api/peers/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+  ,
+  "/api/blocks/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+  ,
+  "/api/blockAndTxList/*/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+  ,
+  "/api/txByOrg/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+  ,
+  "/api/txList/*/*/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+  ,
+  "/api/transaction/*/*": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+}

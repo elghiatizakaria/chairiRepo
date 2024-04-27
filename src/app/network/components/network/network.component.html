@@ -1,0 +1,31 @@
+<div class="bg-gray-100 min-h-screen">
+  <div class="container mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Network</h1>
+    <div class="overflow-x-auto">
+      <table class="table-auto w-full text-left whitespace-no-wrap">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 bg-gray-200">Peer Name</th>
+            <th class="px-4 py-2 bg-gray-200">Request Url</th>
+            <th class="px-4 py-2 bg-gray-200">Peer Type</th>
+            <th class="px-4 py-2 bg-gray-200">MSPID</th>
+            <th class="px-4 py-2 bg-gray-200">High</th>
+            <th class="px-4 py-2 bg-gray-200">Low</th>
+            <th class="px-4 py-2 bg-gray-200">Unsigned</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let peer of peers" class="hover:bg-gray-200">
+            <td class="border px-4 py-2">{{ peer.server_hostname }}</td>
+            <td class="border px-4 py-2">{{ peer.requests }}</td>
+            <td class="border px-4 py-2">{{ peer.peer_type }}</td>
+            <td class="border px-4 py-2">{{ peer.mspid }}</td>
+            <td class="border px-4 py-2">_</td>
+            <td class="border px-4 py-2">_</td>
+            <td class="border px-4 py-2">_</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

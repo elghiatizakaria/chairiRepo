@@ -1,0 +1,35 @@
+<div class="w-full">
+    <div class="p-12 ">
+        <h1 class="text-3xl text-center font-bold">User details</h1>
+        <form class="mt-6 flex flex-col gap-6">
+            <div class="parent-grid">
+                <label >Username</label>
+                <input type="text" id="username" name="username" value="admin" disabled
+                    class="w-full px-4 py-2 rounded-lg">
+                <label>Email</label>
+                <input type="text" id="email" name="email" class="w-full px-4 py-2 rounded-lg">
+                <label >First name</label>
+                <input type="text" id="firstname" name="firstname" class="w-full px-4 py-2 rounded-lg">
+                <label >Last name</label>
+                <input type="text" id="lastname" name="lastname" class="w-full px-4 py-2 rounded-lg">
+                <label for="role">Role</label>
+                <select name="role" id="role" class="w-full px-4 py-2 rounded-lg">
+                    <option value="admin">Admin</option>
+                    <option value="member">Member</option>
+                </select>
+                <div>key</div>
+                <div class=" text-start">
+                    <input type="checkbox" id="ch1" class="text-xxl"/>
+                    <label for="ch1" class="ml-3">checkbox</label>
+                </div>
+                <div></div>
+                <div class="flex flex-row items-start">
+                    
+                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg ">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

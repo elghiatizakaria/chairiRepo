@@ -1,0 +1,72 @@
+<div class="bg-white h-full flex flex-col max-w-2xl">
+  <div class="flex items-center justify-between px-4 py-3 border-b border-gray-300">
+    <h2 class="text-lg font-semibold">Transaction Details</h2>
+    <button class="text-gray-500 focus:outline-none">
+      <svg class="h-4 w-4 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" (click)="close()">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <div class="p-6">
+    <dl class="space-y-6">
+      <div class="table-wrapper" style="width: 760px;">
+        <table class="table">
+          <tbody>
+            <tr>
+                <th class="text-left">Transaction Code</th>
+                <td class="text-left">{{transaction.txhash}}</td>
+              </tr>
+            <tr>
+              <th class="text-left">Validation Code</th>
+              <td class="text-left">{{transaction.validation_code}}</td>
+            </tr>
+            <tr>
+              <th class="text-left">Payload Proposal Hash</th>
+              <td class="text-left">{{transaction.payload_proposal_hash}}</td>
+            </tr>
+            <tr>
+              <th class="text-left">Creator MSP</th>
+              <td class="text-left">{{transaction.creator_msp_id}}</td>
+            </tr>
+            <tr>
+              <th class="text-left">Endorser</th>
+              <td class="text-left">{{transaction.endorser_msp_id}}</td>
+            </tr>
+            <tr>
+              <th class="text-left">Chaincode Name</th>
+              <td class="text-left">{{transaction.chaincodename}}</td>
+            </tr>
+            <tr>
+              <th class="text-left">Type</th>
+              <td class="text-left">{{transaction.type}}</td>
+            </tr>
+            <tr>
+              <th class="text-left">Time</th>
+              <td class="text-left">{{transaction.createdt}}</td>
+            </tr>
+            <tr>
+              <th class="text-left">Channel Name</th>
+              <td class="text-left">{{transaction.channelname}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <style>
+        .table-wrapper {
+          overflow-x: auto;
+        }
+        .table {
+          width: 100%;
+          border-spacing: 0 0.5rem;
+        }
+        .table th,
+        .table td {
+          padding: 0.5rem;
+          text-align: left;
+        }
+      </style>
+    </dl>
+
+  </div>
+</div>
+
