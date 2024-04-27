@@ -1,10 +1,16 @@
 <div class="h-screen w-screen flex flex-row items-stretch">
-    <app-sidebar ></app-sidebar>
-    <main class="flex flex-col items-stretch flex-1">
+    <app-sidebar></app-sidebar>
+    <main class="flex flex-col items-stretch flex-1 bg-slate-200">
         <app-header></app-header>
-        <div class="bg-gray-100 flex-1 overflow-y-scroll">
-            <router-outlet></router-outlet>
-        </div>
 
+        <div class="flex-1 relative">
+            <div class="absolute top-0 right-0 h-full w-full overflow-y-scroll overflow-x-clip">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
     </main>
 </div>
+
+
+        <!-- <div class="flex-1 overflow-y-scroll overflow-x-clip">
+        </div> -->

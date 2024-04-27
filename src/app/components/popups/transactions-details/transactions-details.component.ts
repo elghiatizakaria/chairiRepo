@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+// import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TransactionsService } from '../../../transactions/services/transactions.service';
 import { ChannelsService } from '../../../channels/services/channels.service';
 import { NgFor } from '@angular/common';
@@ -25,20 +25,20 @@ export class TransactionsDetailsComponent implements OnInit {
   constructor(
     private transactionsService: TransactionsService,
     private channelsService: ChannelsService,
-    public dialogRef: MatDialogRef<TransactionsDetailsComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    // public dialogRef: MatDialogRef<TransactionsDetailsComponent>,
+    // @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
   ngOnInit(): void {
-    if (this.data && this.data.txhash) {
-      this.getChannelGenesisHash();
-    }
+    // if (this.data && this.data.txhash) {
+      // this.getChannelGenesisHash();
+    // }
   }
 
   getChannelGenesisHash() {
     this.channelsService.getChannels().subscribe(
       (result: any) => {
-        this.getTransaction(result.channels[0].channel_genesis_hash, this.data.txhash);
+        // this.getTransaction(result.channels[0].channel_genesis_hash, this.data.txhash);
       }
     );
   }
@@ -54,7 +54,7 @@ export class TransactionsDetailsComponent implements OnInit {
 
 
   close(): void {
-    this.dialogRef.close();
+    // this.dialogRef.close();
   }
 
 

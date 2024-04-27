@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+// import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-organisation-popup',
@@ -10,10 +10,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class AddOrganisationPopupComponent {
 
-  constructor(private dialogRef: MatDialogRef<AddOrganisationPopupComponent>) {}
+  constructor(
+    // private dialogRef: MatDialogRef<AddOrganisationPopupComponent>
+  ) {}
 
   onCancelClick(): void {
-    this.dialogRef.close();
+    // this.dialogRef.close();
   }
   
 }

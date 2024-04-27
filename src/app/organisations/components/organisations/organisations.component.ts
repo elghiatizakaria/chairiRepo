@@ -1,54 +1,50 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import {NgForOf} from "@angular/common";
-import {MatDialog} from "@angular/material/dialog";
-import {AddOrganisationPopupComponent} from "../../../components/popups/add-organisation-popup/add-organisation-popup.component";
-
+// import {MatDialog} from "@angular/material/dialog";
+import { TableModule } from 'primeng/table';
 @Component({
   selector: 'app-organisations',
   standalone: true,
     imports: [
-        NgForOf
+        NgForOf,
+        TableModule
     ],
   templateUrl: './organisations.component.html',
   styleUrl: './organisations.component.css'
 })
-export class OrganisationsComponent {
-  constructor(private dialog: MatDialog) { }
+export class OrganisationsComponent implements OnInit{
 
-  openAddOrganisationPopup() {
-    const dialogRef = this.dialog.open(AddOrganisationPopupComponent,{width: '550px',});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+  products!: Product[];
+
+  cols!: Column[];
+
+
+  ngOnInit() {
+      this.products = [
+          { code: '1', name: 'Laptop', price: 1000 },
+          { code: '2', name: 'Desktop', price: 2000 },
+          { code: '3', name: 'Monitor', price: 3000 },
+      ]
+      this.cols = [
+          { field: 'code', header: 'Code' },
+          { field: 'name', header: 'Name' },
+          { field: 'price', header: 'price' },
+      ];
   }
 
-  organisations: organisation[] = [
-    {
-      id: 1,
-      organization: 'John',
-      peers: 'Doe',
-      port: 'johndoe@example.com'
-    },
-    {
-      id: 2,
-      organization: 'Jane',
-      peers: 'Smith',
-      port: 'janesmith@example.com'
-    },
-    {
-      id: 3,
-      organization: 'Bob',
-      peers: 'Johnson',
-      port: 'bobjohnson@example.com'
-    }
-  ];
 
 }
 
-interface organisation {
-  id: number;
-  organization: string;
-  peers: string;
-  port: string;
+interface Column {
+  field: string;
+  header: string;
+}
+
+
+
+export interface Product {
+  code: string;
+  name: string;
+  price: number;
 }
 

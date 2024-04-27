@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+// import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { BlocksService } from '../../../blocks/services/blocks.service';
 import { ChannelsService } from '../../../channels/services/channels.service';
 import { NgFor } from '@angular/common';
@@ -25,8 +25,8 @@ export class blocksDetailsComponent implements OnInit {
   constructor(
     private blocksService: BlocksService,
     private channelsService: ChannelsService,
-    public dialogRef: MatDialogRef<blocksDetailsComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    // public dialogRef: MatDialogRef<blocksDetailsComponent>,
+    // @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
   ngOnInit(): void {
@@ -36,7 +36,7 @@ export class blocksDetailsComponent implements OnInit {
 
 
   close(): void {
-    this.dialogRef.close();
+    // this.dialogRef.close();
   }
 
 

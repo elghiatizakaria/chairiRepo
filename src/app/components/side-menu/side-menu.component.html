@@ -1,0 +1,12 @@
+<div>
+    <p-button
+      icon="pi pi-ellipsis-v pi-ellipsis-v"
+      [rounded]="true"
+      [text]="true"
+      severity="primary "
+      (click)="menu.toggle($event)"
+      
+    ></p-button>
+    <p-menu #menu [model]="items" [popup]="true"></p-menu>
+    <!-- <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars" label="Show"></button> -->
+  </div>

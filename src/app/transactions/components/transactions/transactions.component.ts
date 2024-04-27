@@ -5,7 +5,7 @@ import { ChannelsService } from '../../../channels/services/channels.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TransactionsDetailsComponent } from '../../../components/popups/transactions-details/transactions-details.component';
-import { MatDialog } from '@angular/material/dialog';
+// import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
@@ -31,7 +31,9 @@ export class TransactionsComponent implements OnInit{
   transactions:any[]=[];
   txhash:string='';
 
-  constructor(private transactionsService: TransactionsService,  private channelsService: ChannelsService,private dialog: MatDialog) { }
+  constructor(private transactionsService: TransactionsService,  private channelsService: ChannelsService,
+    // private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.getAllTransactions();
@@ -83,10 +85,10 @@ export class TransactionsComponent implements OnInit{
 
 
   openTransactionDetailsPopup(txhash:string) {
-    const dialogRef = this.dialog.open(TransactionsDetailsComponent,{width: '750px',data:{txhash}});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    // const dialogRef = this.dialog.open(TransactionsDetailsComponent,{width: '750px',data:{txhash}});
+    // dialogRef.afterClosed().subscribe(result => {
+      // console.log('The dialog was closed');
+    // });
   }
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForOf } from '@angular/common';
 import { AddChannelPopupComponent } from '../../../components/popups/add-channel-popup/add-channel-popup.component';
-import { MatDialog } from '@angular/material/dialog';
+// import { MatDialog } from '@angular/material/dialog';
 import { ChannelsService } from '../../services/channels.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './channels.component.css'
 })
 export class ChannelsComponent implements OnInit {
-  constructor(private dialog: MatDialog,private channelsService: ChannelsService) { }
+  constructor(
+    // private dialog: MatDialog,
+    private channelsService: ChannelsService) { }
   ngOnInit(): void {
     this.getChannels();
   }
@@ -36,10 +38,10 @@ export class ChannelsComponent implements OnInit {
   
   
   openAddChannelPopup() {
-    const dialogRef = this.dialog.open(AddChannelPopupComponent,{width: '550px',});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    // const dialogRef = this.dialog.open(AddChannelPopupComponent,{width: '550px',});
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    // });
   }
 
 

@@ -1,22 +1,21 @@
+/* @import "primeng/resources/themes/lara-light-blue/theme.css"; */
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
-@tailwind base;
-@tailwind components;
+@import "primeicons/primeicons.css";
+
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+/* @tailwind base; */
+/* @tailwind components; */
 @tailwind utilities;
 
 
-/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
 body {
-    height: 100vh;
-    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.bg-card {
+    background-color: var(--surface-card);
+}
